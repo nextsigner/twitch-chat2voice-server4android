@@ -1,0 +1,29 @@
+{
+  "name": "twitch-chat2voice-server4android",
+  "version": "1.0.0",
+  "description": "Aplicación para @nextsigner",
+  "main": "index.js",
+  "dependencies": {
+    "npm": "^3.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nextsigner/twitch-chat2voice-server4android.git"
+  },
+  "keywords": [
+    "server",
+    "twitch",
+    "chat",
+    "qml"
+  ],
+  "author": "@nextsigner",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nextsigner/twitch-chat2voice-server4android/issues"
+  },
+  "homepage": "https://github.com/nextsigner/twitch-chat2voice-server4android#readme"
+}
