@@ -1,0 +1,3 @@
+node/Data/node_modules/*
+node/Data/npm_cache/*
+node/App/DefaultData/node_modules/*
