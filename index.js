@@ -78,6 +78,25 @@ function updateLt(){
 var fs = require('fs');
 var path = require('path');
 
+var sqlite3 = require('sqlite3').verbose();
+var db = new sqlite3.Database(':memory:');
+
+db.serialize(function() {
+  db.run("CREATE TABLE msgs (from TEXT, msg TEXT)");
+
+  var stmt = db.prepare("INSERT INTO msgs VALUES (?, ?)");
+  for (var i = 0; i < 10; i++) {
+      stmt.run("Ipsum " + i, "aaa"+i);
+  }
+  stmt.finalize();
+
+  db.each("SELECT rowid AS id, from FROM msgs", function(err, row) {
+      console.log(row.id + ": " + row.info);
+  });
+});
+
+db.close();
+
 app.listen(app.get('port'), function() {
     console.log('Servidor iniciado.');
     console.log('Puertos: App=' + app.get('port') + '  Files='+ puertoStatico);
